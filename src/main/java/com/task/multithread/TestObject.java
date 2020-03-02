@@ -7,7 +7,7 @@ public class TestObject {
         this.counter = 0;
     }
 
-    public String incrCounter(){
+    public String incrCounter() {
         counter++;
         return "" + counter;
     }
