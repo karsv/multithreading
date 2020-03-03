@@ -11,6 +11,7 @@ public class RunnableExample implements Runnable {
     public void run() {
         while (testObject.getCounter() < 100) {
             System.out.println("Runnable :" + testObject.incrCounter());
+
         }
     }
 }
