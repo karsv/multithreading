@@ -1,15 +1,16 @@
 package com.task.multithread;
 
 public class ThreadExample extends Thread {
-    private TestObject testObject;
+    private static final int INCREAMENT_BORDER = 100;
+    private IncreamentedClass testObject;
 
-    ThreadExample(TestObject testObject) {
+    ThreadExample(IncreamentedClass testObject) {
         this.testObject = testObject;
     }
 
     @Override
     public void run() {
-        while (testObject.getCounter() < 100) {
+        while (testObject.getCounter() < INCREAMENT_BORDER) {
             System.out.println("Thread :" + testObject.incrCounter());
         }
     }

@@ -1,15 +1,16 @@
 package com.task.multithread;
 
 public class RunnableExample implements Runnable {
-    private TestObject testObject;
+    private static final int INCREAMENT_BORDER = 100;
+    private IncreamentedClass testObject;
 
-    RunnableExample(TestObject testObject) {
+    RunnableExample(IncreamentedClass testObject) {
         this.testObject = testObject;
     }
 
     @Override
     public void run() {
-        while (testObject.getCounter() < 100) {
+        while (testObject.getCounter() < INCREAMENT_BORDER) {
             System.out.println("Runnable :" + testObject.incrCounter());
 
         }

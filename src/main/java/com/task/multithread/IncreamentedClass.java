@@ -1,13 +1,9 @@
 package com.task.multithread;
 
-public class TestObject {
+public class IncreamentedClass {
     private int counter;
 
-    public TestObject() {
-        this.counter = 0;
-    }
-
-    public synchronized String incrCounter() {
+    public String incrCounter() {
         counter++;
         return "" + counter;
     }
